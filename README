@@ -2,6 +2,8 @@
 
 Written in C++.
 Makefile included.
+Every Directory gets compiled by runnibg a make.
+
 
 Hope this is of help to learners!
 
