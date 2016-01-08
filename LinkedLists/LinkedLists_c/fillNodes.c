@@ -38,6 +38,12 @@ void printList(list *head)
     }
     printf("NULL \n");
 }
+
+
+
+/*
+ * This function duplicates the nodes.
+ */
 list* fillNodes(list* head)
 {
     list *newNode;

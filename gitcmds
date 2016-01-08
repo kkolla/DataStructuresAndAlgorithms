@@ -1,0 +1,4 @@
+git add README
+git commit -m "A simple Readme"
+git remote add origin https://github.com/kkolla/datastructuresandalgorithms.git
+git push -u origin master
