@@ -1,8 +1,6 @@
 #include "search.h"
 
-/*
- * Finds the majority number.
- */
+
 int main() {
     int majNum[7] = {1,2,3,4,4,4,4};
     cout<<"Majority num: "<<majorityNum(majNum, 7)<<endl;
