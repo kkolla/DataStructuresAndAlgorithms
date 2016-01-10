@@ -8,7 +8,7 @@ CFLAGS  = -g -Wall
 all: strings
 
 strings:
-	$(CC) $(CFLAGS) -o strings strings.cc reverseString.cc removeDuplicates.cc
+	$(CC) $(CFLAGS) -o strings strings.cc reverseString.cc removeDuplicates.cc permutations.cc combinations.cc
 
 clean:
 	-rm -rf *.dS*

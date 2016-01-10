@@ -11,3 +11,13 @@ string reverseStr(string str) {
     }
     return str;
 }
+void reverseStr(char* str, int begin, int end)
+{
+    char ch;
+    if (end >= begin) return;
+    while (begin < end) {
+        ch = str[begin];
+        str[begin] = str[end];
+        str[end] = ch;
+    }
+}
