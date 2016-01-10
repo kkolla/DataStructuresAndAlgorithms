@@ -11,7 +11,7 @@ all: search occurrance
 search:
 	$(CC) $(CFLAGS) -o search search.cc majorityNum.cc dutchNationalFlag.cc
 
-another:
+occurrance:
 	$(CC) $(CFLAGS) -o occurrance occurrance.cc
 
 clean:
