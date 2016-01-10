@@ -2,7 +2,7 @@
 
 Written in C++.
 Makefile included.
-Every Directory gets compiled by runnibg a 'make'.
+Every Directory gets compiled by running a 'make'.
 
 
 Hope this is of help to learners!
