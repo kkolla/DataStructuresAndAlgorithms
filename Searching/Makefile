@@ -9,7 +9,7 @@ all: search occurrance
 .PHONY : all
 
 search:
-	$(CC) $(CFLAGS) -o search search.cc majorityNum.cc
+	$(CC) $(CFLAGS) -o search search.cc majorityNum.cc dutchNationalFlag.cc
 
 another:
 	$(CC) $(CFLAGS) -o occurrance occurrance.cc
