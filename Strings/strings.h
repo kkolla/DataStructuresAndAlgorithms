@@ -9,3 +9,4 @@ void reverseStr(char* str, int begin, int end);
 string removeDuplicates(string str);
 void permutations(char *str);
 void combinations(char *str);
+void printInterleave(char *s1, char *s2);

@@ -35,8 +35,20 @@ void testCombinations()
     combinations(test);
     free(test);
 }
+void testInterleave()
+{
+    auto string s1 = "ab";
+    auto string s2 = "cd";
+    char *testS1 = getCStyleString(s1);
+    char *testS2 = getCStyleString(s2);
+    std::cout << "Interleaved strings of : "<< s1 <<" "<< s2 << std::endl;
+    printInterleave(testS1,testS2);
+    free(testS1);
+    free(testS2);
+}
 int main() {
-    testPermutations();
-    testCombinations();
+    //testPermutations();
+    //testCombinations();
+    testInterleave();
     return 0;
 }
