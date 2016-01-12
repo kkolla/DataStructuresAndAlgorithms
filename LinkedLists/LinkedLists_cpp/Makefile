@@ -6,12 +6,10 @@ CC = g++
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -g -Wall
 
-OBJECTS = list.o
+all: list
 
-default: list
-
-%.o: %.cc
-	$(CC) $(CFLAGS) $< -o $@
+list:
+	$(CC) $(CFLAGS) -o list list.cc sortList.cc listUtil.cc reverseMerge.cc
 
 clean:
 	-rm -rf *.dS*
