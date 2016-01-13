@@ -14,6 +14,17 @@ list* makeNode(int data)
     newNode->next = NULL;
     return newNode;
 }
+list* reverse(list *head) {
+    list *next = NULL;
+    list *prev = NULL;
+    while (head != NULL) {
+        next = head->next;
+        head->next = prev;
+        prev = head;
+        head = next;
+    }
+    return prev;
+}
 void usage()
 {
     printf("sll <size> <SLL1> <SLL2> ...\n");
@@ -63,6 +74,8 @@ int main(int argc, char *argv[]) {
         input[i] = atoi(argv[i+2]);
     }
     head = makeSLL(size, input);
+    printList(head);
+    head = reverse(head);
     printList(head);
 	return 0;
 }

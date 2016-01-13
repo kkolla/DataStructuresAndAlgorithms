@@ -9,7 +9,7 @@ CFLAGS  = -g -Wall
 all: list
 
 list:
-	$(CC) $(CFLAGS) -o list list.cc sortList.cc listUtil.cc reverseMerge.cc
+	$(CC) $(CFLAGS) -o list list.cc sortList.cc listUtil.cc reverseMerge.cc addLists.cc
 
 clean:
 	-rm -rf *.dS*

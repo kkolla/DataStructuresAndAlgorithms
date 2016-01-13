@@ -7,14 +7,7 @@ void displayDown(multiLevelList* head)
     }
     cout<<endl;
 }
-void sortMergeReverseMergeTest(int argc, char *argv[])
-{
-    List *head1 = getList(argc, argv, 1);
-    List *head2 = getList(argc, argv, 10);
-    printList(sortList(head1));
-    printList(sortList(head2));
-    printList(reverseMerge(head1, head2));
-}
+
 void digDeep(multiLevelList *head, int level) {
     for (size_t i = 2; i < level; i++) {
         head->down = new multiLevelList(head->data*i);
@@ -57,6 +50,28 @@ multiLevelList * flattenList(multiLevelList *head) {
     res->next = NULL;
     return res;
 }
+
+/*
+ * Different types of Tests
+ */
+List* listAddTest(int argc, char *argv[])
+{
+    List *head1 = getList(argc, argv, 1);
+    List *head2 = getList(argc, argv, 2);
+    List *head = new List(9);
+    head->next = head1;
+    printList(head);
+    printList(head2);
+    return addLists(head, head2);
+}
+void sortMergeReverseMergeTest(int argc, char *argv[])
+{
+    List *head1 = getList(argc, argv, 1);
+    List *head2 = getList(argc, argv, 10);
+    printList(sortList(head1));
+    printList(sortList(head2));
+    printList(reverseMerge(head1, head2));
+}
 void flattenTest(int argc, char *argv[])
 {
     multiLevelList *head = makeMultiLevelList(argc, argv);
@@ -67,6 +82,6 @@ void flattenTest(int argc, char *argv[])
     printList(head);
 }
 int main(int argc, char *argv[]) {
-    flattenTest(argc, argv);
+    printList(listAddTest(argc, argv));
     return 0;
 }

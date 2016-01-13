@@ -48,4 +48,5 @@ List* reverseMerge(List *head1, List *head2);
 List* makeSLL(int len, int* input);
 List* getList(int argc, char *argv[], int multiply);
 multiLevelList* getMultiLevelList(int argc, char *argv[], int multiply);
-multiLevelList* makeMultiLevelSLL(int len, int* input);;
+multiLevelList* makeMultiLevelSLL(int len, int* input);
+List* addLists(List* head1, List* head2);
