@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 int* multiplyTwoNumber(int* A, int m, int* B, int n)
 {
 	int i, j, shift, carry, len = m + n;
@@ -27,7 +28,7 @@ int* multiplyTwoNumber(int* A, int m, int* B, int n)
 	return output;
 }
 
-int main(int argc, char *argv[]) {
+int main() {
 	int i;
 	int one[2] = {5,0};
 	int two[2] = {1,2};

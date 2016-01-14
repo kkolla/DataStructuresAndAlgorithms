@@ -1,13 +1,23 @@
-OBJECTS = Int_to_Binary.o multiply2numbers.o combinations_sizeCfrom_list_sizeN.o
+CC = g++
+C = gcc
 
-default: Int_to_Binary multiply2numbers combinations_sizeCfrom_list_sizeN
+# compiler flags:
+#  -g    adds debugging information to the executable file
+#  -Wall turns on most, but not all, compiler warnings
+CFLAGS  = -g -Wall
 
-%.o: %.c
-	gcc -g -c $< -o $@
+all: combinations_sizeCfrom_list_sizeN multiply2numbers regexMatch
+.PHONY : all
 
-program: $(OBJECTS)
-	gcc $(OBJECTS) -o $@
+combinations_sizeCfrom_list_sizeN:
+	$(C) $(CFLAGS) -o combinations_sizeCfrom_list_sizeN combinations_sizeCfrom_list_sizeN.c
+
+regexMatch:
+	$(CC) $(CFLAGS) -o regexMatch regexMatch.cc
+
+multiply2numbers:
+	$(C) $(CFLAGS) -o multiply2numbers multiply2numbers.c
 
 clean:
-	-rm -f $(OBJECTS)
-	-rm -f Int_to_Binary combinations_sizeCfrom_list_sizeN multiply2numbers
+	-rm -rf *.dS*
+	-rm -f *.o multiply2numbers combinations_sizeCfrom_list_sizeN regexMatch
