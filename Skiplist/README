@@ -1,0 +1,45 @@
+Sample Execution.
+
+This program is tested for 4 levels of list.
+Please dis-regard the code for pretty printing. I hacked it into printing levels in such a way that,
+it is clear to the naked eye what node points to what, at what level.
+
+=====================================SAMPLE OUTPUT=====================================
+
+azkaban-pro:~/Dropbox/programs/Skiplist [$ ./skiplist 9 1 3 5 7 9 11 13 15 17
+size 9
+The current skip list is:
+1>3>5>7>9>11131517
+1-->5-->9-->13->17
+1------>9------>17
+1-------------->17
+
+Enter a value to search this skiplist:
+5
+Finding 5 in the above skiplist
+5 found
+
+
+
+azkaban-pro:~/Dropbox/programs/Skiplist [$ ./skiplist 9 1 3 5 7 9 11 13 15 17
+size 9
+The current skip list is:
+1>3>5>7>9>11131517
+1-->5-->9-->13->17
+1------>9------>17
+1-------------->17
+
+Enter a value to search this skiplist:
+43
+Finding 43 in the above skiplist
+Not found
+=================================END OF SAMPLE OUTPUT==================================
+
+
+
+In the above invocation, in the output, the links point to the levels and currently the skiplist has 4 levels.
+
+1>3>5>7>9>11131517
+1-->5-->9-->13->17
+1------>9------>17
+1-------------->17
