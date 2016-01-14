@@ -21,7 +21,7 @@ bool isMatch(const char* str, const char* regex)
     if (*regex == '.')
     {
         if(singleMatch(str, regex) == false) return false;
-        return singleMatch(str+1, regex+1);
+        return isMatch(str+1, regex+1);
     }
     // Firstly we have a regexes [(S, S*), (Sa, S*) which is true.
     // Lets not look into this case now, but look at cases like, [(sa,s.), (aa,aa)] etc.
@@ -29,7 +29,7 @@ bool isMatch(const char* str, const char* regex)
         // If they clash at the beginning itself.
         // a, b
         if(singleMatch(str, regex) == false) return false;
-        return singleMatch(str+1, regex+1);
+        return isMatch(str+1, regex+1);
     }
 
     // In this case we look at baa c*c, b and c are not equal, if the second char is *
@@ -65,6 +65,8 @@ int main() {
     testRegex("aaaaaaaaaaaaab","ab");
     testRegex("aaaaaa", "a*");
     testRegex("aaaaaabbbb","a*bbbb");
+    testRegex("aaaaaabbbb","a*bbb");
+    testRegex("aaaaaabbcb","a*bb.b");
     testRegex("aaaaaa","a*");
     return 0;
 }
