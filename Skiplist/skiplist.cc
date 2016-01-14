@@ -1,43 +1,16 @@
 #include "skiplist.h"
-int* processInputs (int *length, int argc, char *argv[])
-{
-    int size;
-    if (argc <= 1)
-    {
-        usage();
-    }
-    size = atoi(argv[1]);
-    printf("size %d\n",size);
-    if (size == 0)
-    {
-        return 0;
-    }
-
-    if (argc != size + 2)
-    {
-        usage();
-    }
-    int* input = new int[size];
-    for(int i = 0; i < size; i++)
-    {
-        input[i] = atoi(argv[i+2]);
-    }
-    *length = size;
-    return input;
-}
-
 /*
  * make a skiplist that is similar to a linked list.
  * this forms the zeroth level.
  */
-Skiplist* makeLevel0SkipList(int len, int* input)
+Skiplist* makeLevelZeroSkipList(int len, int* input)
 {
     Skiplist *head;
     if(len == 0) {
         return NULL;
     }
     head = new Skiplist(input[0]);
-    head->next[0] = makeLevel0SkipList(len - 1, input+1);
+    head->next[0] = makeLevelZeroSkipList(len - 1, input+1);
     return head;
 }
 
@@ -73,14 +46,13 @@ void populateLevels(Skiplist* head) {
  * 'multiply' multiplies the given data by a given number;
  *
  */
-Skiplist* getList(int argc, char *argv[])
+Skiplist* makeSkipList(int argc, char *argv[])
 {
     int listLen;
     int *input = processInputs(&listLen, argc, argv);
     // Initially populate the zeroth level;
-    Skiplist *head = makeLevel0SkipList(listLen, input);
+    Skiplist *head = makeLevelZeroSkipList(listLen, input);
     populateLevels(head);
-
     free(input);
     return head;
 }
@@ -160,7 +132,7 @@ Skiplist* skipFind(Skiplist *head, int value) {
     return NULL;
 }
 int main(int argc, char *argv[]) {
-    Skiplist *head = getList(argc, argv);
+    Skiplist *head = makeSkipList(argc, argv);
     int value = 0;
     cout<<"The current skip list is:\n";
     showSkipList(head, 0);
