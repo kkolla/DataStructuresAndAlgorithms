@@ -65,6 +65,6 @@ int main() {
     testRegex("aaaaaaaaaaaaab","ab");
     testRegex("aaaaaa", "a*");
     testRegex("aaaaaabbbb","a*bbbb");
-
+    testRegex("aaaaaa","a*");
     return 0;
 }
