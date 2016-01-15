@@ -28,6 +28,7 @@ void test64BitOperations() {
     uint8_t *ptr = (uint8_t *)&number;
 
     for (int i = 0; i < 8; i++) {
+        cout<<"endl";
         printBinaryRecurse(ptr[i]);
         cout<<endl;
     }
