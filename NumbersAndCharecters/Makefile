@@ -11,7 +11,7 @@ charecters:
 	$(CC) $(CFLAGS) -o charecters charecters.cc
 
 numbers:
-	$(CC) $(CFLAGS) -o numbers numbers.cc
+	$(CC) $(CFLAGS) -o numbers numbers.cc multiply.cc
 
 convertToNbase:
 	$(CC) $(CFLAGS) -o convertToNbase convertToNbase.cc

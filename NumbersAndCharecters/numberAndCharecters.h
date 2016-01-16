@@ -11,16 +11,6 @@
 #define KWHT  "\x1B[37m"
 #define RESET "\033[0m"
 using namespace std;
+int* multiply(int *A, int m, int *B, int n);
 /* Print n as a binary number */
-void printbitssimple(uint8_t n) {
-	unsigned int i;
-	i = 1<<(sizeof(n) * 8 - 1);
-
-	while (i > 0) {
-		if (n & i)
-			printf("1");
-		else
-			printf("0");
-		i >>= 1;
-	}
-}
+void printbitssimple(uint8_t n);

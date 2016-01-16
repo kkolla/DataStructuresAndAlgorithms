@@ -1,4 +1,17 @@
 #include "numberAndCharecters.h"
+void printbitssimple(uint8_t n) {
+	unsigned int i;
+	i = 1<<(sizeof(n) * 8 - 1);
+
+	while (i > 0) {
+		if (n & i)
+			printf("1");
+		else
+			printf("0");
+		i >>= 1;
+	}
+}
+
 /*
  * Doesnt print zeroes in the higher order bits
  */
@@ -69,9 +82,20 @@ void testEndian() {
     printf(RESET"");
     cout<<KGRN"\nNotice the addresses and values stores at that addresses\n"RESET;
 }
+void multiplyTest()
+{
+    int a[] = {9,9,9};
+    int b[] = {9,9};
+    int *res = multiply(a, 3, b, 2);
+    for (size_t i = 0; i < 5; i++) {
+        cout<<res[i];
+    }
+    free(res);
+}
 int main() {
+    multiplyTest();
     //testEndian();
-    test64BitOperations();
+    //test64BitOperations();
     cout<<endl;
     return 0;
 }
