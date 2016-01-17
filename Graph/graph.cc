@@ -13,7 +13,7 @@ void DFS_(Graph *G, int *visited, int u)
 void DFS(Graph *G)
 {
     int *visited = new int[G->V];
-    memset(visited,0,G->V);
+    memset(visited,0,(G->V)*sizeof(int));
     DFS_(G,visited, 0);
     cout<<endl;
 }
