@@ -8,7 +8,7 @@ CFLAGS  = -g -Wall
 all: numbers charecters convertToNbase
 
 charecters:
-	$(CC) $(CFLAGS) -o charecters charecters.cc
+	$(CC) $(CFLAGS) -o charecters charecters.cc longestSubstringNoRepeatChars.cc
 
 numbers:
 	$(CC) $(CFLAGS) -o numbers numbers.cc multiply.cc

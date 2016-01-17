@@ -12,5 +12,6 @@
 #define RESET "\033[0m"
 using namespace std;
 int* multiply(int *A, int m, int *B, int n);
+int longestNonRepeatingSubstring(const char *string, int len);
 /* Print n as a binary number */
 void printbitssimple(uint8_t n);

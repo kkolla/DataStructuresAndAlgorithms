@@ -53,8 +53,17 @@ void cmpTest() {
     myStrCmp("d", "D") ? cout<<"not same\n" : cout<<"same\n";
 }
 
+void longestNonRepeatingCharTest() {
+    cout<<longestNonRepeatingSubstring("abcd", 4)<<endl;
+    cout<<longestNonRepeatingSubstring("abad", 4)<<endl;
+    cout<<longestNonRepeatingSubstring("aaaa", 4)<<endl;
+    cout<<longestNonRepeatingSubstring("a", 1)<<endl;
+    cout<<longestNonRepeatingSubstring("", 0)<<endl;
+    cout<<longestNonRepeatingSubstring("!@!@", 4)<<endl;
+    cout<<longestNonRepeatingSubstring("  ", 2)<<endl;
+    cout<<longestNonRepeatingSubstring(" ", 1)<<endl;
+}
 int main() {
-    cmpTest();
-
+    longestNonRepeatingCharTest();
     return 0;
 }
