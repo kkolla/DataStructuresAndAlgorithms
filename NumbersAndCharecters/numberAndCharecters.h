@@ -1,5 +1,6 @@
 #include <iostream>
-#include <math.h>
+#include <cmath>
+#include <stdlib.h>
 #include <limits.h>
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -15,3 +16,4 @@ int* multiply(int *A, int m, int *B, int n);
 int longestNonRepeatingSubstring(const char *string, int len);
 /* Print n as a binary number */
 void printbitssimple(uint8_t n);
+double squareroot(double input);

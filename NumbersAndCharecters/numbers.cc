@@ -92,10 +92,27 @@ void multiplyTest()
     }
     free(res);
 }
+void squareRootTest()
+{
+	cout<<squareroot(0.2) <<endl;
+	cout<<squareroot(1)   <<endl;
+	cout<<squareroot(2.0) <<endl;
+	cout<<squareroot(3.0) <<endl;
+	cout<<squareroot(4.0) <<endl;
+	cout<<squareroot(5.0) <<endl;
+	cout<<squareroot(6.0) <<endl;
+	cout<<squareroot(7.0) <<endl;
+	cout<<squareroot(8.0) <<endl;
+	cout<<squareroot(9.0) <<endl;
+	cout<<squareroot(10.0)<<endl;
+}
 int main() {
-    multiplyTest();
+	squareRootTest();
+
+	//multiplyTest();
     //testEndian();
     //test64BitOperations();
+
     cout<<endl;
     return 0;
 }

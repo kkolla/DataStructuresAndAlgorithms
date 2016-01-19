@@ -11,7 +11,7 @@ charecters:
 	$(CC) $(CFLAGS) -o charecters charecters.cc longestSubstringNoRepeatChars.cc
 
 numbers:
-	$(CC) $(CFLAGS) -o numbers numbers.cc multiply.cc
+	$(CC) $(CFLAGS) -o numbers numbers.cc multiply.cc squareroot.cc
 
 convertToNbase:
 	$(CC) $(CFLAGS) -o convertToNbase convertToNbase.cc

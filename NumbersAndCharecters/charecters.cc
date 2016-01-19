@@ -63,6 +63,7 @@ void longestNonRepeatingCharTest() {
     cout<<longestNonRepeatingSubstring("  ", 2)<<endl;
     cout<<longestNonRepeatingSubstring(" ", 1)<<endl;
 }
+
 int main() {
     longestNonRepeatingCharTest();
     return 0;
